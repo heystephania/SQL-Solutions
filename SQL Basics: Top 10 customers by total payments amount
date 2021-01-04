@@ -1,0 +1,9 @@
+Select c.customer_id, c.email, 
+COUNT(p.*) AS payments_count,
+SUM(p.amount :: float) AS total_amount
+FROM customer c
+INNER JOIN payment p
+ON p.customer_id = c.customer_id
+GROUP BY c.customer_id
+ORDER BY 4 DESC
+LIMIT 10;
