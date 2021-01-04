@@ -1,0 +1,8 @@
+SELECT DATE(s.transaction_date) AS day,
+d.name AS department,
+COUNT(s.product_id) AS sale_count 
+FROM sale s 
+INNER JOIN department d
+ON d.id = s.department_id
+GROUP BY 1, 2
+ORDER BY 1 
