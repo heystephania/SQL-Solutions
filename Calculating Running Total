@@ -1,0 +1,12 @@
+with data as (
+  select
+  DATE(posts.created_at) AS date,
+  count(*) AS count
+  from posts
+  group by 1
+)
+select
+  date,count,
+  sum(count::INT) over 
+  (order by date asc rows between unbounded preceding and current row) AS total
+from data
