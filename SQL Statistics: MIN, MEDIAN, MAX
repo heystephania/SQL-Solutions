@@ -1,0 +1,4 @@
+SELECT MIN(r.score),
+PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY r.score) AS median,
+MAX(r.score) 
+FROM result r
