@@ -1,0 +1,7 @@
+SELECT
+player_name, games,
+CAST (ROUND(AVG(hits*1.0/at_bats*1.0),3) AS varchar) AS batting_average
+FROM yankees
+WHERE at_bats >= 100
+GROUP BY 1, 2,hits, at_bats
+ORDER BY 3 DESC
