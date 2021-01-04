@@ -1,0 +1,5 @@
+With special_sales AS
+(SELECT DISTINCT d.* FROM departments d, sales s 
+WHERE d.id = s.department_id and s.price > 90 
+ORDER BY d.id)
+Select * From special_sales;
