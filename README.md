@@ -31,10 +31,6 @@ SELECT DISTINCT(rental_rate) FROM film
 ORDER BY 1 DESC;
 ```
 
-![SQL%20Statement%20Fundamentals%205050f1b1adee46e9a02c1ae3e92265e7/Untitled.png](SQL%20Statement%20Fundamentals%205050f1b1adee46e9a02c1ae3e92265e7/Untitled.png)
-
-Results
-
 ## COUNT
 
 Syntax: 
@@ -61,17 +57,10 @@ More Examples of Count function:
 SELECT COUNT(*) FROM payment;
 ```
 
-![SQL%20Statement%20Fundamentals%205050f1b1adee46e9a02c1ae3e92265e7/Untitled%201.png](SQL%20Statement%20Fundamentals%205050f1b1adee46e9a02c1ae3e92265e7/Untitled%201.png)
-
-Results 
-
 ```sql
 SELECT COUNT(DISTINCT amount) FROM payment;
 ```
 
-![SQL%20Statement%20Fundamentals%205050f1b1adee46e9a02c1ae3e92265e7/Untitled%202.png](SQL%20Statement%20Fundamentals%205050f1b1adee46e9a02c1ae3e92265e7/Untitled%202.png)
-
-Results 
 
 ## SELECT WHERE
 
@@ -112,10 +101,6 @@ More Examples of SELECT WHERE
 SELECT * FROM customer
 WHERE first_name = 'Jared'
 ```
-
-![SQL%20Statement%20Fundamentals%205050f1b1adee46e9a02c1ae3e92265e7/Untitled%203.png](SQL%20Statement%20Fundamentals%205050f1b1adee46e9a02c1ae3e92265e7/Untitled%203.png)
-
-results 
 
 ```sql
 # films where the rental rate is more than 4
@@ -260,10 +245,7 @@ WHERE first_name NOT LIKE '%her%'
     ORDER BY 2 DESC;
     ```
 
-    Results: 
-
-    ![SQL%20Statement%20Fundamentals%205050f1b1adee46e9a02c1ae3e92265e7/Untitled%204.png](SQL%20Statement%20Fundamentals%205050f1b1adee46e9a02c1ae3e92265e7/Untitled%204.png)
-
+    
 3. Challenge SELECT WHERE
 
     A customer forgot their wallet at our store! We need to track down their email to inform them. What is the email for the customer with the name Nancy Thomas? 
