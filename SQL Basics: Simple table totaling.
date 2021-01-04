@@ -1,0 +1,9 @@
+SELECT DISTINCT  
+RANK () OVER (ORDER BY points DESC) rank,
+COALESCE(NULLIF(clan,''),'[no clan specified]') clan,
+MAX(points) AS total_points,
+COUNT(DISTINCT clan) AS total_people
+FROM people 
+GROUP BY clan, points
+ORDER BY total_points DESC
+;
