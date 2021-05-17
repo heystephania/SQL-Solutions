@@ -1,0 +1,9 @@
+-- Inventory count 
+with a as (
+SELECT film.film_id, title,inventory_id 
+FROM film 
+LEFT JOIN inventory ON inventory.film_id = film.film_id
+) 
+SELECT title, COUNT(title) FROM a  
+GROUP BY title
+ORDER BY 2 DESC
